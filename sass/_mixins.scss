@@ -34,3 +34,7 @@
 
   @return 0 $primary-offset $blur $color;
 }
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: $sizeValue + rem;
+}

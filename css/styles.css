@@ -52,9 +52,32 @@ body {
   background: linear-gradient(to left, #ddd6f3, #faaca8);
   padding: 25px 25px 0 25px; }
 
+html {
+  font-size: 62.5%; }
+
+p {
+  font-size: 1.6rem; }
+
+h1 {
+  font-size: 5.6rem; }
+
+h2 {
+  font-size: 4.8rem; }
+
+h3 {
+  font-size: 4rem; }
+
+h4 {
+  font-size: 3.2rem; }
+
+h5 {
+  font-size: 2.4rem; }
+
 .card {
   background: #FCFCFC;
   color: #191919;
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
+
+/*# sourceMappingURL=css/maps/styles.css.map */
