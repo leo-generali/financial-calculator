@@ -1,0 +1,9 @@
+.card {
+  background: $card-background;
+  color: $font-color;
+  padding: 1rem;
+
+  margin-bottom: 1rem; 
+
+  @include card(1);
+}
