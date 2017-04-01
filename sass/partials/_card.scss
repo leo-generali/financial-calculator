@@ -13,14 +13,21 @@
 
 .calculator {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 
 
   &--input {
     height: 3rem;
     padding: 0.25rem 1rem;
-    background-color: darken($card-background, 5%);
+    //background-color: darken($card-background, 5%);
     font-family: $font-stack;
+    margin-bottom: 1rem;
+
+    max-width: 200px;
+
+    border: 2px solid transparent;
+    border-image: $background;
+    border-image-slice: 1;
   }
 
   &--submit {
