@@ -1,16 +1,46 @@
 .card {
+  max-width: 960px;
   background: $card-background;
   color: $font-color;
   padding: 1rem;
+
+  margin: auto;
 
   margin-bottom: 1rem; 
 
   @include card(1);
 }
 
-.calculator--input {
-  height: 3rem;
-  padding: 0.25rem 1rem;
-  background-color: darken($card-background, 5%);
+.calculator {
+  display: flex;
+  flex-wrap: wrap;
+
+
+  &--input {
+    height: 3rem;
+    padding: 0.25rem 1rem;
+    background-color: darken($card-background, 5%);
+    font-family: $font-stack;
+  }
+
+  &--submit {
+    background-image: $background;
+    color: $card-background;
+  
+    border-radius: 1rem;
+    height: 4rem;
+    width: 100px;
+
+    @include card(1);
+    @include grow;
+  }
+
+  &--submit:hover {
+    cursor: pointer;
+    @include card(2);
+  }
+
 }
+
+
 

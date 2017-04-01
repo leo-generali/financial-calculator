@@ -71,8 +71,8 @@ textarea {
   background: none;
   line-height: 1;
   /* Browsers have different default form fonts */
-  font-size: 13px;
-  font-family: Arial; }
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
 
 /* Remove the stupid outer glow in Webkit */
 input:focus {
@@ -124,8 +124,7 @@ input[type="reset"],
 input[type="button"],
 input[type="submit"] {
   /* Fix IE7 display bug */
-  overflow: visible;
-  width: auto; }
+  overflow: visible; }
 
 /* IE8 and FF freak out if this rule is within another selector */
 ::-webkit-file-upload-button {
@@ -176,15 +175,37 @@ h5 {
   font-size: 2.4rem; }
 
 .card {
+  max-width: 960px;
   background: #FCFCFC;
   color: #191919;
   padding: 1rem;
+  margin: auto;
   margin-bottom: 1rem;
   box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12); }
 
-.calculator--input {
-  height: 3rem;
-  padding: 0.25rem 1rem;
-  background-color: #efefef; }
+.calculator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  .calculator--input {
+    height: 3rem;
+    padding: 0.25rem 1rem;
+    background-color: #efefef;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif; }
+  .calculator--submit {
+    background-image: -webkit-linear-gradient(right, #ddd6f3, #faaca8);
+    background-image: linear-gradient(to left, #ddd6f3, #faaca8);
+    color: #FCFCFC;
+    border-radius: 1rem;
+    height: 4rem;
+    width: 100px;
+    box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out; }
+  .calculator--submit:hover {
+    cursor: pointer;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
 
 /*# sourceMappingURL=css/maps/styles.css.map */

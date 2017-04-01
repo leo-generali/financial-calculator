@@ -76,8 +76,8 @@ textarea
   line-height:1;
   
   /* Browsers have different default form fonts */
-  font-size:13px;
-  font-family:Arial;
+  font-size: 1.6rem;
+  font-family: $font-stack;
 }
 
 /* Remove the stupid outer glow in Webkit */
@@ -176,7 +176,6 @@ input[type="submit"]
 {
   /* Fix IE7 display bug */
   overflow:visible;
-  width:auto;
 }
 
 /* IE8 and FF freak out if this rule is within another selector */
