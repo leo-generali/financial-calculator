@@ -209,8 +209,7 @@ h5 {
     height: 3.4rem;
     width: 3.4rem;
     padding: 0.25rem 0.25rem;
-    background: -webkit-linear-gradient(right, #3acfd5 0%, #3a4ed5 100%);
-    background: linear-gradient(to left, #3acfd5 0%, #3a4ed5 100%);
+    background: #faaca8;
     color: #FCFCFC;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -220,7 +219,8 @@ h5 {
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    font-size: 2.4rem; }
   .calculator--submit {
     background-image: -webkit-linear-gradient(right, #ddd6f3, #faaca8);
     background-image: linear-gradient(to left, #ddd6f3, #faaca8);
@@ -228,11 +228,63 @@ h5 {
     border-radius: 1rem;
     height: 4rem;
     width: 100px;
+    margin: 0 auto;
     box-shadow: 0 1.5px 4px rgba(0, 0, 0, 0.24), 0 1.5px 6px rgba(0, 0, 0, 0.12);
     -webkit-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out; }
   .calculator--submit:hover {
     cursor: pointer;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.23), 0 3px 12px rgba(0, 0, 0, 0.16); }
+
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer; }
+
+/* Hide the tooltip content by default */
+[data-tooltip]:before,
+[data-tooltip]:after {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none; }
+
+/* Position tooltip above the element */
+[data-tooltip]:before {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: 5px;
+  margin-left: -5px;
+  padding: 7px;
+  width: 160px;
+  border-radius: 3px 3px 3px 0px;
+  background-color: #000;
+  background-color: rgba(51, 51, 51, 0.9);
+  color: #fff;
+  content: attr(data-tooltip);
+  text-align: center;
+  font-size: 1.6rem;
+  line-height: 1.2; }
+
+/* Triangle hack to make tooltip look like a speech bubble */
+[data-tooltip]:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  width: 0;
+  border-top: 5px solid #000;
+  border-top: 5px solid rgba(51, 51, 51, 0.9);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: " ";
+  font-size: 0;
+  line-height: 0; }
+
+/* Show tooltip content on hover */
+[data-tooltip]:hover:before,
+[data-tooltip]:hover:after {
+  visibility: visible;
+  opacity: 1; }
 
 /*# sourceMappingURL=css/maps/styles.css.map */
