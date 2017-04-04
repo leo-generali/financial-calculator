@@ -52,6 +52,8 @@
     height: 4rem;
     width: 100px;
 
+    margin: 0 auto;
+
     @include card(1);
     @include grow;
   }
