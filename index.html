@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Financial Calculator</title>
+    <title>401k Calculator</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
@@ -13,51 +13,96 @@
     </head>
   <body>
     <section class="card">
-      <h4>Finance Calculator</h4>
+      <h4>401k Calculator</h4>
       <form class="calculator">
 
         <section class="calculator--item">
           <div 
             class="calculator--tip"
-            data-tooltip="I’m the tooltip text."
+            data-tooltip="Enter the percent of your salary that you will contribute to your 401k."
+          >%</div>
+          <input 
+            type="number" 
+            step="any"
+            class="calculator--input" 
+            name="contribution"
+            placeholder="Percent to contribute" 
+          />
+        </section>
+
+        <section class="calculator--item">
+          <div 
+            class="calculator--tip"
           >$</div>
-          <input type="number" class="calculator--input" name="contribution">
+          <input 
+            type="number" 
+            class="calculator--input"
+            name="salary"
+            placeholder="Current annual salary">
         </section>
 
         <section class="calculator--item">
-          <div class="calculator--tip">$</div>
-          <input type="number" class="calculator--input" name="salary">
-        </section>
-
-        <section class="calculator--item">
-          <div class="calculator--tip">$</div>        
-          <input type="number" class="calculator--input" name="years">
-        </section>
-
-        <section class="calculator--item">
-          <div class="calculator--tip">$</div>  
-          <input type="number" class="calculator--input" name="current-balance">
-        </section>
-
-        <section class="calculator--item">
-          <div class="calculator--tip">$</div>  
-          <input type="number" class="calculator--input" name="est-salary-incr">
+          <div 
+            class="calculator--tip"
+          >$</div>        
+          <input 
+            type="number" 
+            class="calculator--input"
+            name="years"
+            placeholder="Years until retirement"
+          >
         </section>
 
         <section class="calculator--item">
           <div class="calculator--tip">$</div>  
-          <input type="number" class="calculator--input" name="employer-match">
+          <input 
+            type="number" 
+            class="calculator--input" 
+            name="current-balance"
+            placeholder="Current 401k balance"
+          >
         </section>
 
         <section class="calculator--item">
           <div class="calculator--tip">$</div>  
-          <input type="number" class="calculator--input" name="employer-contribution">
+          <input 
+            type="number" 
+            class="calculator--input" 
+            name="est-salary-incr"
+            placeholder="Estimated annual salary increase"
+          >
+        </section>
+        
+        <section class="calculator--item">
+          <div class="calculator--tip">$</div>  
+          <input 
+            type="number" 
+            class="calculator--input" 
+            name="rate-of-return"
+            placeholder="Estimated annual rate of return"
+          >
         </section>
 
         <section class="calculator--item">
           <div class="calculator--tip">$</div>  
-          <input type="number" class="calculator--input" name="rate-of-return">
+          <input 
+            type="number" 
+            class="calculator--input" 
+            name="employer-match"
+            placeholder="Employer match"
+          >
         </section>
+
+        <section class="calculator--item">
+          <div class="calculator--tip">$</div>  
+          <input 
+            type="number" 
+            class="calculator--input" 
+            name="employer-contribution"
+            placeholder="Employer match contribution"
+          >
+        </section>
+
 
         <input type="submit" class="calculator--submit" value="Submit">
       <form>
