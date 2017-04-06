@@ -13,96 +13,58 @@
     </head>
   <body>
     <section class="card">
-      <h4>401k Calculator</h4>
-      <form class="calculator">
+      <h4 class="header">Interest Rate Calculator</h4>
+      <form class="calculator" id="form"  onsubmit="handleFormSubmit(event)" >
 
         <section class="calculator--item">
           <div 
             class="calculator--tip"
-            data-tooltip="Enter the percent of your salary that you will contribute to your 401k."
-          >%</div>
+          ></div>
+          <input 
+            type="number" 
+            step="any"
+            class="calculator--input"
+            name="balance"
+            placeholder="starting balance">
+        </section>
+
+        <section class="calculator--item">
+          <div 
+            class="calculator--tip"
+          ></div>
           <input 
             type="number" 
             step="any"
             class="calculator--input" 
             name="contribution"
-            placeholder="Percent to contribute" 
+            placeholder="percent to contribute" 
           />
         </section>
 
         <section class="calculator--item">
           <div 
             class="calculator--tip"
-          >$</div>
+          ></div>        
           <input 
             type="number" 
             class="calculator--input"
-            name="salary"
-            placeholder="Current annual salary">
+            name="years"
+            placeholder="years to grow"
+          >
         </section>
 
         <section class="calculator--item">
           <div 
             class="calculator--tip"
-          >$</div>        
+          ></div>        
           <input 
             type="number" 
+            step="any"
             class="calculator--input"
-            name="years"
-            placeholder="Years until retirement"
+            name="interest"
+            placeholder="interest rate"
           >
         </section>
-
-        <section class="calculator--item">
-          <div class="calculator--tip">$</div>  
-          <input 
-            type="number" 
-            class="calculator--input" 
-            name="current-balance"
-            placeholder="Current 401k balance"
-          >
-        </section>
-
-        <section class="calculator--item">
-          <div class="calculator--tip">$</div>  
-          <input 
-            type="number" 
-            class="calculator--input" 
-            name="est-salary-incr"
-            placeholder="Estimated annual salary increase"
-          >
-        </section>
-        
-        <section class="calculator--item">
-          <div class="calculator--tip">$</div>  
-          <input 
-            type="number" 
-            class="calculator--input" 
-            name="rate-of-return"
-            placeholder="Estimated annual rate of return"
-          >
-        </section>
-
-        <section class="calculator--item">
-          <div class="calculator--tip">$</div>  
-          <input 
-            type="number" 
-            class="calculator--input" 
-            name="employer-match"
-            placeholder="Employer match"
-          >
-        </section>
-
-        <section class="calculator--item">
-          <div class="calculator--tip">$</div>  
-          <input 
-            type="number" 
-            class="calculator--input" 
-            name="employer-contribution"
-            placeholder="Employer match contribution"
-          >
-        </section>
-
 
         <input type="submit" class="calculator--submit" value="Submit">
       <form>
@@ -114,5 +76,6 @@
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <script type="text/javascript" src='js/script.js'></script>
   </body>
 </html>
