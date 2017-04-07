@@ -19,16 +19,33 @@ var handleFormSubmit = function(e) {
   }
 
   //Debug: console.log data
-  data.arr = calculateInvestmentValues(data.balance, data.contribution, data.years, data.interest);
+  data.yearlyBalances = calculateInvestmentValues(data.balance, data.contribution, data.years, data.interest);
+
+
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: createYearLabels( data.years ),
+      datasets: [{
+        label: 'yearly balance',
+        data: createChartData( data.yearlyBalances[0] ),
+        backgroundColor: "rgba(153,255,51,0.4)"
+      }]
+    }
+  });
+
   console.log(data);
   e.preventDefault();
 }
 
 /**
  * Creates array of investment value 
- * @param {Number} a 
- * @param {Number} b
- * @return {Number} sum
+ * @balance {Number} a 
+ * @contribution {Number} b
+ * @years {Number} b
+ * @interset {Number} b
+ * @return {Array} sum
  */
 
 var calculateInvestmentValues = function(balance, contribution, years, interest) {
@@ -65,27 +82,30 @@ var createYearLabels = function(years) {
   var currentYear = new Date().getFullYear();
   var arr = [];
   console.log(currentYear);
-  for(var i = 0; i < years.length; i++) {
+  for(var i = 0; i < years; i++) {
     arr.push(currentYear + i);
+    console.log(arr);  
   }
+
 
   return arr;
 }
 
-
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
-  type: 'line',
-  data: {
-    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
-    datasets: [{
-      label: 'apples',
-      data: [12, 19, 3, 17, 6, 3, 7],
-      backgroundColor: "rgba(153,255,51,0.4)"
-    }, {
-      label: 'oranges',
-      data: [2, 29, 5, 5, 2, 3, 10],
-      backgroundColor: "rgba(255,153,0,0.4)"
-    }]
+var createChartData = function(balances) {
+  var arr = [];
+  for(var i = 0; i < balances.length; i++) {
+    arr.push(balances[i]);
   }
-});
+  return arr;
+}
+
+
+
+
+
+
+
+
+
+
+
